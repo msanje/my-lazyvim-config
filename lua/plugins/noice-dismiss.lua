@@ -1,4 +1,3 @@
-print("hello from noice-dismiss.lua")
 vim.keymap.set("n", "<Esc>", function()
   if require("noice.lsp").scroll then
     vim.cmd("NoiceDismiss")
