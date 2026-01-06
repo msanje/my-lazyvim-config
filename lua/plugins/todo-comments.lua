@@ -22,9 +22,21 @@ return {
         icon = "",
         color = "#06d6a0", -- teal/green (curiosity, uncertainty)
       },
+      Q = {
+        icon = "",
+        color = "#06d6a0", -- teal/green (curiosity, uncertainty)
+      },
+      ANS = {
+        icon = "",
+        color = "#3a86ff", -- teal/green (curiosity, uncertainty)
+      },
       ATHERE = {
         icon = "",
         color = "#ffd166", -- teal/green (curiosity, uncertainty)
+      },
+      VERIFY = {
+        icon = "",
+        color = "#ff7a00",
       },
     },
   },
