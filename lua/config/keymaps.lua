@@ -4,13 +4,13 @@
 
 vim.keymap.set("n", "<leader>h", function()
   require("telescope.builtin").live_grep({ default_text = "ATHERE" })
-end)
+end, { desc = "Open ATHERE on Telescope" })
 
 vim.keymap.set("n", "<leader>H", function()
   require("telescope.builtin").live_grep({
     default_text = "TODO:|FIX:|FIXME:|BUG:|HACK:|NOTE:|WARN:|WARNING:|PERF:|OPTIMIZE:|SECURITY:|DEPRECATED:|TEMP:|REVIEW:|QUESTION:",
   })
-end)
+end, { desc = "Open TODO on Telescope" })
 
 vim.keymap.set("n", "gl", vim.diagnostic.open_float, {
   desc = "Line diagnostics",
@@ -22,3 +22,5 @@ vim.keymap.set("n", "ss", "<C-b>", { desc = "Page up" })
 
 vim.keymap.set("n", "fj", "<C-d>", { desc = "Half page down" })
 vim.keymap.set("n", "fk", "<C-u>", { desc = "Half page up" })
+
+vim.keymap.set("n", "t", "<cmd>TodoTelescope<CR>", { desc = "Open TODO Telescope" })

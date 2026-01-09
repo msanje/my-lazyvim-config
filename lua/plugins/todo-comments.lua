@@ -20,23 +20,51 @@ return {
       },
       QUESTION = {
         icon = "",
-        color = "#06d6a0", -- teal/green (curiosity, uncertainty)
+        color = "#BD5EB7",
       },
       Q = {
         icon = "",
-        color = "#06d6a0", -- teal/green (curiosity, uncertainty)
+        color = "#BD5EB7",
+      },
+      ANSWER = {
+        icon = "",
+        color = "#B1F200",
       },
       ANS = {
         icon = "",
-        color = "#3a86ff", -- teal/green (curiosity, uncertainty)
+        color = "#B1F200",
+      },
+      A = {
+        icon = "",
+        color = "#B1F200",
       },
       ATHERE = {
         icon = "",
-        color = "#ffd166", -- teal/green (curiosity, uncertainty)
+        color = "#b8a1ff", -- teal/green (curiosity, uncertainty)
       },
       VERIFY = {
         icon = "",
         color = "#ff7a00",
+      },
+      NEXT = {
+        icon = "",
+        color = "#ffd166",
+      },
+      REVISIT = {
+        icon = "",
+        color = "#4ecdc4",
+      },
+      HYP = {
+        icon = "",
+        color = "#ef476f",
+      },
+      GOAL = {
+        icon = "",
+        color = "#f1f1f1",
+      },
+      SOTP = {
+        icon = "",
+        color = "#3240a8",
       },
     },
   },
