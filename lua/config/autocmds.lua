@@ -14,3 +14,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "undotree",
+  callback = function()
+    vim.cmd("vertical resize 35")
+  end,
+})
