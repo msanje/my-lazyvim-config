@@ -62,9 +62,13 @@ return {
         icon = "",
         color = "#f1f1f1",
       },
-      SOTP = {
+      PROBLEM = {
         icon = "",
         color = "#3240a8",
+      },
+      THREAD = {
+        icon = "",
+        color = "#06D6A0",
       },
     },
   },
