@@ -70,6 +70,31 @@ return {
         icon = "",
         color = "#06D6A0",
       },
+      IMP = {
+        icon = "",
+        color = "#610324",
+      },
+
+      IMPORTANT = {
+        icon = "",
+        color = "#610324",
+      },
+      WORKS = {
+        icon = "",
+        color = "#f7f5f0",
+      },
+      NO = {
+        icon = "",
+        color = "#1b8ff5",
+      },
+      INCOMPLETE = {
+        icon = "",
+        color = "#f04532",
+      },
+      COMPLETE = {
+        icon = "",
+        color = "#3cc208",
+      },
     },
   },
 }
