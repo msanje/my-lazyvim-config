@@ -1,3 +1,5 @@
+vim.g.lazyvim_picker = "telescope"
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -18,6 +20,14 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+    -- use mini.starter instead of alpha
+    -- { import = "lazyvim.plugins.extras.ui.mini-starter" },
+
+    -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
+    { import = "lazyvim.plugins.extras.lang.json" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
