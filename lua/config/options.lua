@@ -18,3 +18,21 @@ vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
+
+-- Kill Vim's built-in spell checker (everywhere, permanently)
+vim.opt.spell = false
+vim.opt.spelllang = {}
+
+-- Make absolutely sure no buffer re-enables it
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  callback = function()
+    vim.opt_local.spell = false
+  end,
+})
+
+-- Hide all diagnostic visuals (spell-style noise)
+vim.diagnostic.config({
+  virtual_text = false,
+  underline = false,
+  signs = false,
+})
