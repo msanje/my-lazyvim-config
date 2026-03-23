@@ -3,8 +3,12 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>h", function()
-  require("telescope.builtin").live_grep({ default_text = "ATHERE" })
-end, { desc = "Open ATHERE on Telescope" })
+  require("telescope.builtin").live_grep({ default_text = "AT_HERE" })
+end, { desc = "Open AT_HERE on Telescope" })
+
+vim.keymap.set("n", "<leader>h", function()
+  require("telescope.builtin").live_grep({ default_text = "AT_HERE" })
+end, { desc = "Open AT_HERE on Telescope" })
 
 vim.keymap.set("n", "<leader>r", function()
   require("telescope.builtin").live_grep({ default_text = "THREAD" })

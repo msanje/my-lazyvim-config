@@ -38,7 +38,7 @@ return {
         icon = "",
         color = "#B1F200",
       },
-      ATHERE = {
+      AT_HERE = {
         icon = "",
         color = "#b8a1ff", -- teal/green (curiosity, uncertainty)
       },
@@ -94,6 +94,10 @@ return {
       COMPLETE = {
         icon = "",
         color = "#3cc208",
+      },
+      STATE = {
+        icon = "",
+        color = "#d6643e",
       },
     },
   },
