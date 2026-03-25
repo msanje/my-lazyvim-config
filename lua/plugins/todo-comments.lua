@@ -99,6 +99,14 @@ return {
         icon = "",
         color = "#d6643e",
       },
+      TASK = {
+        icon = "",
+        color = "#00b4d8", -- clean cyan (actionable work)
+      },
+      STARTER_TASK = {
+        icon = "",
+        color = "#90dbf4", -- lighter cyan (entry point / easy start)
+      },
     },
   },
 }

@@ -6,19 +6,9 @@ vim.keymap.set("n", "<leader>h", function()
   require("telescope.builtin").live_grep({ default_text = "AT_HERE" })
 end, { desc = "Open AT_HERE on Telescope" })
 
-vim.keymap.set("n", "<leader>h", function()
-  require("telescope.builtin").live_grep({ default_text = "AT_HERE" })
-end, { desc = "Open AT_HERE on Telescope" })
-
 vim.keymap.set("n", "<leader>r", function()
   require("telescope.builtin").live_grep({ default_text = "THREAD" })
 end, { desc = "Open THREAD on Telescope" })
-
-vim.keymap.set("n", "<leader>H", function()
-  require("telescope.builtin").live_grep({
-    default_text = "TODO:|FIX:|FIXME:|BUG:|HACK:|NOTE:|WARN:|WARNING:|PERF:|OPTIMIZE:|SECURITY:|DEPRECATED:|TEMP:|REVIEW:|QUESTION:",
-  })
-end, { desc = "Open TODO on Telescope" })
 
 vim.keymap.set("n", "gl", vim.diagnostic.open_float, {
   desc = "Line diagnostics",
@@ -31,4 +21,6 @@ vim.keymap.set("n", "ss", "<C-b>", { desc = "Page up" })
 vim.keymap.set("n", "fj", "<C-d>", { desc = "Half page down" })
 vim.keymap.set("n", "fk", "<C-u>", { desc = "Half page up" })
 
-vim.keymap.set("n", "t", "<cmd>TodoTelescope<CR>", { desc = "Open TODO Telescope" })
+vim.keymap.set("n", "t", function()
+  require("telescope").extensions["todo-comments"].todo()
+end, { desc = "Open TODO Telescope" })
