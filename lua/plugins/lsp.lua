@@ -69,11 +69,15 @@ return {
     --   },
     -- },
     opts = function(_, opts)
+      opts.defaults = opts.defaults or {}
+
       opts.defaults.layout_strategy = "horizontal"
       opts.defaults.layout_config = opts.defaults.layout_config or {}
       opts.defaults.layout_config.prompt_position = "top"
       opts.defaults.sorting_strategy = "ascending"
       opts.defaults.winblend = 0
+
+      opts.defaults.wrap_results = false
     end,
   },
 
