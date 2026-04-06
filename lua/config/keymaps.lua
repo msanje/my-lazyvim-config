@@ -24,3 +24,45 @@ vim.keymap.set("n", "fk", "<C-u>", { desc = "Half page up" })
 vim.keymap.set("n", "t", function()
   require("telescope").extensions["todo-comments"].todo()
 end, { desc = "Open TODO Telescope" })
+
+vim.keymap.set("n", "<leader>o", "<cmd>Telescope tmux sessions<cr>", {
+  desc = "Tmux sessions",
+})
+
+-- vim.keymap.set("n", "<leader>sl", function()
+--   vim.fn.system("tmux switch-client -l")
+-- end, { desc = "Tmux sessions" })
+
+-- resession keymaps
+
+-- save session
+vim.keymap.set("n", "<leader>sr", function()
+  require("resession").save(vim.fn.input("Save session: "))
+end)
+
+-- load session - load a specific session that you know the name for.
+-- vim.keymap.set("n", "<leader>sl", function()
+--   require("resession").load(vim.fn.input("Load session: "))
+-- end)
+
+-- list sessions
+vim.keymap.set("n", "<leader>sl", function()
+  local sessions = require("resession").list()
+  require("telescope.pickers")
+    .new({}, {
+      prompt_title = "Sessions",
+      finder = require("telescope.finders").new_table({
+        results = sessions,
+      }),
+      sorter = require("telescope.config").values.generic_sorter({}),
+      attach_mappings = function(_, map)
+        map("i", "<CR>", function(prompt_bufnr)
+          local selection = require("telescope.actions.state").get_selected_entry()
+          require("telescope.actions").close(prompt_bufnr)
+          require("resession").load(selection[1])
+        end)
+        return true
+      end,
+    })
+    :find()
+end)
