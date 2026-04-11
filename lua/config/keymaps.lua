@@ -66,3 +66,9 @@ vim.keymap.set("n", "<leader>sl", function()
     })
     :find()
 end)
+
+vim.keymap.set("n", "<leader>so", function()
+  require("telescope.builtin").live_grep({
+    grep_open_files = true,
+  })
+end, { desc = "Grep open buffers" })
