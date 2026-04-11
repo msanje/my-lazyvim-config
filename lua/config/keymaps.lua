@@ -61,6 +61,17 @@ vim.keymap.set("n", "<leader>sl", function()
           require("telescope.actions").close(prompt_bufnr)
           require("resession").load(selection[1])
         end)
+        map("i", "<C-d>", function(prompt_bufnr)
+          local picker = require("telescope.actions.state").get_current_picker(prompt_bufnr)
+          local selection = picker:get_selection()
+          require("resession").delete(selection[1])
+          picker:refresh(
+            require("telescope.finders").new_table({
+              results = require("resession").list(),
+            }),
+            { reset_prompt = false }
+          )
+        end)
         return true
       end,
     })
